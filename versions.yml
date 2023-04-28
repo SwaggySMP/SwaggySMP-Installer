@@ -6,22 +6,24 @@ groups:
   - name: Performance
     enabledByDefault: true
   - name: Visual Enhancements
+    enabledByDefault: true
   - name: HUD Enhancements
+    enabledByDefault: true
   - name: Dependencies
     forceEnabled: true
 modGroups:
   Core:
     - name: Sodium
-      license: LGPL-3
+      license: LGPL-3.0
       homepage: https://modrinth.com/mod/sodium
       desc: Greatly improves rendering performance
       url: https://cdn.modrinth.com/data/AANobbMI/versions/b4hTi3mo/sodium-fabric-mc1.19.4-0.4.10%2Bbuild.24.jar
 
-    - name: Mod menu
-      license: MIT
-      homepage: https://modrinth.com/mod/modmenu
-      desc: Adds a menu that allows configuration of mods
-      url: https://cdn.modrinth.com/data/mOgUt4GM/versions/yjjsLqbS/modmenu-6.2.1.jar
+    - name: Plasmo Voice
+      license: LGPL-3.0
+      homepage: https://modrinth.com/plugin/plasmo-voice
+      desc: A proximity voice chat mod with audio positioning and lots of features
+      url: https://cdn.modrinth.com/data/1bZhdhsH/versions/StFz4k1Y/plasmovoice-fabric-1.19.4-2.0.3.jar
 
     - name: DesiredServers
       license: MIT
@@ -29,6 +31,14 @@ modGroups:
       desc: Ship servers without modifying servers.dat
       url: https://cdn.modrinth.com/data/GDpe4LHD/versions/4F5sOpkI/desiredservers-fabric-1.19.2-1.1.0.jar
       configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/DesiredServerConfig.zip
+      forceConfigDownload: true
+
+    - name: Custom Splash Screen
+      license: MIT
+      homepage: https://modrinth.com/mod/custom-splash-screen
+      desc: Allows to completely change the minecraft splash screen
+      url: https://cdn.modrinth.com/data/BwFQLeCh/versions/1.2.0/customsplashscreen-1.2.0.jar
+      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/customsplashscreen.zip
       forceConfigDownload: true
 
   Performance:
@@ -49,12 +59,18 @@ modGroups:
       homepage: https://modrinth.com/mod/entityculling
       desc: Skips rendering Tiles/Entities that are not visible.
       url: https://cdn.modrinth.com/data/NNAgCjsB/versions/UvJN5Cy4/entityculling-fabric-1.6.2-mc1.19.4.jar
-    
+
     - name: KennyTVsEpicForceCloseLoadingScreenMod
       license: MIT
       homepage: https://modrinth.com/mod/forcecloseworldloadingscreen
       desc: Improves loading times when changing worlds
       url: https://cdn.modrinth.com/data/blWBX5n1/versions/Ql2mxFsU/forcecloseloadingscreen-2.1.0.jar
+
+    - name: Dynamic FPS
+      license: MIT
+      homepage: https://modrinth.com/mod/dynamic-fps
+      desc: Dynamic FPS automatically reduces the speed at which Minecraft renders when it's not focused
+      url: https://cdn.modrinth.com/data/LQ3K71Q1/versions/2.2.0/dynamic-fps-2.2.0.jar
 
   Visual Enhancements:
     - name: Iris Shaders
@@ -70,6 +86,19 @@ modGroups:
       homepage: https://modrinth.com/mod/fallingleaves
       desc: Adds falling leaf particles to trees
       url: https://cdn.modrinth.com/data/WhbRG4iK/versions/OSEfdzSy/fallingleaves-1.15.0%2B1.19.4.jar
+      requires: [ Cloth Config ]
+
+    - name: 3D Skin Layers
+      license: tr7zw Protective
+      homepage: https://modrinth.com/mod/3dskinlayers
+      desc: Replaces the usually flat second layer of player skins with a 3d modeled version
+      url: https://cdn.modrinth.com/data/zV5r3pPn/versions/rvtgIO5A/3dskinlayers-fabric-1.5.3-mc1.19.4.jar
+
+    - name: Chat Heads
+      license: MPL-2.0
+      homepage: https://modrinth.com/mod/chat-heads
+      desc: Displays player heads next to chat messages. It makes telling various people in chat apart easier and just looks nice
+      url: https://cdn.modrinth.com/data/Wb5oqrBJ/versions/AgO6WgUz/chat_heads-0.10.12-fabric-1.19.4.jar
       requires: [ Cloth Config ]
 
   HUD Enhancements:
@@ -93,3 +122,9 @@ modGroups:
       homepage: https://modrinth.com/mod/fabric-api
       desc: The core api used by fabric mods
       url: https://cdn.modrinth.com/data/P7dR8mSH/versions/qvrUMd9Z/fabric-api-0.79.0%2B1.19.4.jar
+
+    - name: Mod menu
+      license: MIT
+      homepage: https://modrinth.com/mod/modmenu
+      desc: Adds a menu that allows configuration of mods
+      url: https://cdn.modrinth.com/data/mOgUt4GM/versions/yjjsLqbS/modmenu-6.2.1.jar
