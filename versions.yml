@@ -69,7 +69,7 @@ modGroups:
     - name: Dynamic FPS
       license: MIT
       homepage: https://modrinth.com/mod/dynamic-fps
-      desc: Dynamic FPS automatically reduces the speed at which Minecraft renders when it's not focused
+      desc: Automatically reduces usage when the game is not focused
       url: https://cdn.modrinth.com/data/LQ3K71Q1/versions/2.2.0/dynamic-fps-2.2.0.jar
 
   Visual Enhancements:
@@ -97,7 +97,7 @@ modGroups:
     - name: Chat Heads
       license: MPL-2.0
       homepage: https://modrinth.com/mod/chat-heads
-      desc: Displays player heads next to chat messages. It makes telling various people in chat apart easier and just looks nice
+      desc: Displays player heads next to chat messages.
       url: https://cdn.modrinth.com/data/Wb5oqrBJ/versions/AgO6WgUz/chat_heads-0.10.12-fabric-1.19.4.jar
       requires: [ Cloth Config ]
 
