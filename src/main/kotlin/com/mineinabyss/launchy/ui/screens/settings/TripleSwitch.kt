@@ -5,7 +5,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.AbsoluteRoundedCornerShape
+import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
@@ -32,10 +33,12 @@ fun ToggleButtons(
     val offColor = Color.Transparent
     val offTextColor = MaterialTheme.colorScheme.surface
     val forced = group.forceEnabled || group.forceDisabled
-    Surface(shape = RoundedCornerShape(20.0.dp)) {
+    Surface(
+        shape = AbsoluteRoundedCornerShape(corner = CornerSize(5.dp)),
+    ) {
         Surface(
             color = MaterialTheme.colorScheme.background,
-            shape = RoundedCornerShape(20.0.dp),
+            shape = AbsoluteRoundedCornerShape(corner = CornerSize(5.dp)),
             tonalElevation = 10.dp
         ) {
             Row(
@@ -108,8 +111,9 @@ fun TripleSwitchButton(
         enabled = enabled,
         colors = color,
         onClick = { onSwitch(setTo) },
-        modifier = modifier.fillMaxHeight()
-    ) {
+        modifier = modifier.fillMaxHeight(),
+        shape = AbsoluteRoundedCornerShape(corner = CornerSize(5.dp)),
+        ) {
         content()
     }
 }

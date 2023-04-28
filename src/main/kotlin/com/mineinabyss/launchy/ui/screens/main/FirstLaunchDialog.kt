@@ -56,14 +56,14 @@ fun FirstLaunchDialog(
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
-                    "Welcome to Launchy!",
-                    style = MaterialTheme.typography.headlineMedium,
+                    "Welcome to the SwaggySMP Installer!\n",
+                    style = MaterialTheme.typography.headlineSmall,
                     modifier = Modifier.padding(bottom = 10.dp),
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
-                    "Launchy is a mod installer provided by the MineInAbyss team. \n" +
-                            "It will install a MineInAbyss profile for you in the Minecraft launcher. \n" +
+                    "This mod installer is provided by the LabKit Studio team. \n\n" +
+                            "It will install a SwaggySMP profile for you in the Minecraft launcher. \n" +
                             "If you don't have the official launcher installed, you can download it by clicking the button below. \n" +
                             "You can also install extra recommended mods for performance and quality of life. \n" +
                             "You can change these settings later in the settings screen.",

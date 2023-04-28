@@ -19,7 +19,7 @@ import androidx.compose.ui.window.WindowScope
 fun BoxScope.BackgroundImage(windowScope: WindowScope) {
     windowScope.WindowDraggableArea {
         Image(
-            painter = painterResource("mia_render.jpg"),
+            painter = painterResource("smp_render.png"),
             contentDescription = "Main render",
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
@@ -32,7 +32,7 @@ fun BoxScope.BackgroundImage(windowScope: WindowScope) {
 fun BoxScope.BackgroundTint() {
     val colors = listOf(
         Color.Transparent,
-        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
     )
 
     BoxWithConstraints(Modifier.align(Alignment.BottomCenter)) {
@@ -48,9 +48,9 @@ fun BoxScope.BackgroundTint() {
 @Composable
 fun LogoLarge(modifier: Modifier) {
     Image(
-        painter = painterResource("mia_profile_icon.png"),
-        contentDescription = "Mine in Abyss logo",
-        modifier = Modifier.widthIn(0.dp, 500.dp).fillMaxSize().then(modifier),
+        painter = painterResource("smp_profile_icon.png"),
+        contentDescription = "SwaggySMP logo",
+        modifier = Modifier.widthIn(0.dp, 400.dp).fillMaxSize().then(modifier),
         contentScale = ContentScale.FillWidth
     )
 }

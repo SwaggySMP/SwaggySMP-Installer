@@ -67,7 +67,7 @@ fun ModInfo(group: Group, mod: Mod) {
                 )
 
                 Row(Modifier.weight(6f)) {
-                    Text(mod.name, style = MaterialTheme.typography.bodyLarge)
+                    Text(mod.name, style = MaterialTheme.typography.bodyMedium)
                     // build list of mods that are incompatible with this mod
                     val incompatibleMods = state.versions.modGroups.flatMap { it.value }
                         .filter { mod.name in it.incompatibleWith || it.name in mod.incompatibleWith }

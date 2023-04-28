@@ -16,7 +16,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import com.mineinabyss.launchy.ui.state.TopBarState
@@ -66,11 +65,11 @@ fun AppTopBar(
                     Spacer(Modifier.width(5.dp))
                 }
                 AnimatedVisibility(!transparent) {
-                    Text(
-                        "Mine in Abyss",
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+//                    Text(
+//                        "SwaggySMP",
+//                        fontWeight = FontWeight.Medium,
+//                        color = MaterialTheme.colorScheme.primary
+//                    )
                 }
             }
             Row {

@@ -35,7 +35,7 @@ fun HandleImportSettings() {
             windowScope,
             onAccept = {
                 try {
-                    (Dirs.minecraft / "options.txt").copyTo(Dirs.mineinabyss / "options.txt")
+                    (Dirs.minecraft / "options.txt").copyTo(Dirs.swaggysmp / "options.txt")
                 } catch (e: Exception) {
                     // TODO: Show error message
                     e.printStackTrace()
@@ -64,7 +64,7 @@ fun ImportSettingsDialog(
 
     Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
         Surface(
-            shape = RoundedCornerShape(28.dp),
+            shape = RoundedCornerShape(10.dp),
             modifier = Modifier.widthIn(280.dp, 560.dp)
         ) {
             Column(

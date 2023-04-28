@@ -2,23 +2,14 @@ package com.mineinabyss.launchy.ui.screens.main
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Delete
-import androidx.compose.material.icons.rounded.Download
-import androidx.compose.material.icons.rounded.HistoryEdu
-import androidx.compose.material.icons.rounded.Update
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.AbsoluteRoundedCornerShape
+import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material3.Button
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.mineinabyss.launchy.LocalLaunchyState
 
@@ -26,40 +17,38 @@ import com.mineinabyss.launchy.LocalLaunchyState
 fun UpdateInfoButton() {
     val state = LocalLaunchyState
     var toggled by remember { mutableStateOf(false) }
-    Button(onClick = { toggled = !toggled }, shape = RoundedCornerShape(20.dp)) {
+    Button(
+        onClick = { toggled = !toggled },
+        shape = AbsoluteRoundedCornerShape(corner = CornerSize(5.dp)),
+    ) {
         Column {
             Row {
-                Icon(Icons.Rounded.Update, contentDescription = "Updates")
                 Text("${state.queuedDownloads.size + state.queuedDeletions.size} Updates")
             }
-
             AnimatedVisibility(
                 toggled,
                 enter = expandIn(tween(200)) + fadeIn(tween(200, 100)),
                 exit = fadeOut() + shrinkOut(tween(200, 100))
             ) {
                 Column {
+                    Spacer(Modifier.height(25.dp))
                     InfoText(
                         shown = !state.fabricUpToDate,
-                        icon = Icons.Rounded.HistoryEdu,
-                        desc = "Install fabric",
+                        desc = "Install Fabric",
                     )
                     InfoText(
                         shown = state.updatesQueued,
-                        icon = Icons.Rounded.Update,
-                        desc = "Update",
+                        desc = "Update:",
                         extra = state.queuedUpdates.size.toString()
                     )
                     InfoText(
                         shown = state.installsQueued,
-                        icon = Icons.Rounded.Download,
-                        desc = "Download",
+                        desc = "Download:",
                         extra = state.queuedInstalls.size.toString()
                     )
                     InfoText(
                         shown = state.deletionsQueued,
-                        icon = Icons.Rounded.Delete,
-                        desc = "Remove",
+                        desc = "Remove:",
                         extra = state.queuedDeletions.size.toString()
                     )
                 }
@@ -69,9 +58,8 @@ fun UpdateInfoButton() {
 }
 
 @Composable
-fun InfoText(shown: Boolean, icon: ImageVector, desc: String, extra: String = "") {
+fun InfoText(shown: Boolean, desc: String, extra: String = "") {
     if (shown) Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(icon, desc)
         Text(desc, Modifier.padding(5.dp))
         Text(extra)
     }

@@ -7,7 +7,8 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.TooltipArea
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.AbsoluteRoundedCornerShape
+import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ArrowDropDown
 import androidx.compose.material.icons.rounded.Difference
@@ -38,7 +39,7 @@ fun ModGroup(group: Group, mods: Collection<Mod>) {
     Column {
         Surface(
             tonalElevation = tonalElevation,
-            shape = RoundedCornerShape(20.dp),
+            shape = AbsoluteRoundedCornerShape(corner = CornerSize(5.dp)),
             modifier = Modifier.fillMaxWidth(),
             onClick = { expanded = !expanded },
         ) {
@@ -81,8 +82,8 @@ fun ModGroup(group: Group, mods: Collection<Mod>) {
         AnimatedVisibility(expanded) {
             Surface(
                 tonalElevation = 0.2.dp,
-                shape = RoundedCornerShape(20.dp),
-                modifier = Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 8.dp, start = 10.dp)
+                shape = AbsoluteRoundedCornerShape(corner = CornerSize(5.dp)),
+                modifier = Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 8.dp, start = 50.dp)
             ) {
                 Column {
                     for (mod in mods) ModInfo(group, mod)

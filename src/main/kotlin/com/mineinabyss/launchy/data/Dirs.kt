@@ -11,26 +11,26 @@ object Dirs {
         OS.LINUX -> Path(System.getProperty("user.home")) / ".minecraft"
     }
 
-    val mineinabyss = when (OS.get()) {
-        OS.WINDOWS -> Path(System.getenv("APPDATA")) / ".mineinabyss"
-        OS.MAC -> Path(System.getProperty("user.home")) / "Library/Application Support/mineinabyss"
-        OS.LINUX -> Path(System.getProperty("user.home")) / ".mineinabyss"
+    val swaggysmp = when (OS.get()) {
+        OS.WINDOWS -> Path(System.getenv("APPDATA")) / ".swaggysmp"
+        OS.MAC -> Path(System.getProperty("user.home")) / "Library/Application Support/swaggysmp"
+        OS.LINUX -> Path(System.getProperty("user.home")) / ".swaggysmp"
     }
-    val mods = mineinabyss / "mods"
-    val tmp = mineinabyss / ".tmp"
+    val mods = swaggysmp / "mods"
+    val tmp = swaggysmp / ".tmp"
 
     val config = when (OS.get()) {
         OS.WINDOWS -> Path(System.getenv("APPDATA"))
         OS.MAC -> Path(System.getProperty("user.home")) / "Library/Application Support"
         OS.LINUX -> home / ".config"
-    } / "mineinabyss"
+    } / "swaggysmp"
 
-    val configFile = config / "mia-launcher.yml"
-    val versionsFile = config / "mia-versions.yml"
+    val configFile = config / "smp-launcher.yml"
+    val versionsFile = config / "smp-versions.yml"
 
     fun createDirs() {
         config.createDirectories()
-        mineinabyss.createDirectories()
+        swaggysmp.createDirectories()
         mods.createDirectories()
         tmp.createDirectories()
     }

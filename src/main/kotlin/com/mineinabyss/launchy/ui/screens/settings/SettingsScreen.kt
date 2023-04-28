@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.mineinabyss.launchy.LocalLaunchyState
-import com.mineinabyss.launchy.data.Constants
 import com.mineinabyss.launchy.data.Constants.SETTINGS_HORIZONTAL_PADDING
 
 @Composable
@@ -21,12 +20,13 @@ import com.mineinabyss.launchy.data.Constants.SETTINGS_HORIZONTAL_PADDING
 fun SettingsScreen() {
     val state = LocalLaunchyState
     Scaffold(
+//        containerColor =  MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.2f),
         bottomBar = { InfoBar() },
     ) { paddingValues ->
         Box(Modifier.padding(paddingValues)) {
             Box(Modifier.padding(horizontal = SETTINGS_HORIZONTAL_PADDING)) {
                 val lazyListState = rememberLazyListState()
-                LazyColumn(Modifier.fillMaxSize().padding(end = 12.dp), lazyListState) {
+                LazyColumn(Modifier.fillMaxSize().padding(end = 15.dp), lazyListState) {
                     item { Spacer(Modifier.height(4.dp)) }
                     items(state.versions.modGroups.toList()) { (group, mods) ->
                         ModGroup(group, mods)

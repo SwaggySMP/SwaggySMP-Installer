@@ -45,12 +45,12 @@ tasks.withType<KotlinCompile> {
     )
 }
 
-val appInstallerName = "MineInAbyss_Launcher-" + when {
+val appInstallerName = "SwaggySMP_Launcher-" + when {
     Os.isFamily(Os.FAMILY_MAC) -> "macOS"
     Os.isFamily(Os.FAMILY_WINDOWS) -> "windows"
     else -> "linux"
 }
-val appName = "Mine in Abyss Launcher"
+val appName = "SwaggySMP Installer"
 
 compose.desktop {
     application {
@@ -84,7 +84,7 @@ compose.desktop {
     }
 }
 
-val linuxAppDir = project.file("packaging/appimage/Mine in Abyss.AppDir")
+val linuxAppDir = project.file("packaging/appimage/SwaggySMP.AppDir")
 val appImageTool = project.file("deps/appimagetool.AppImage")
 val composePackageDir = "$buildDir/compose/binaries/main/${
     when {

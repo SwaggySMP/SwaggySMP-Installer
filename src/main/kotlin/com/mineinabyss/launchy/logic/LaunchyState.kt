@@ -109,7 +109,7 @@ class LaunchyState(
         installedMinecraftVersion == versions.minecraftVersion &&
                 installedFabricVersion == versions.fabricVersion && FabricInstaller.isProfileInstalled(
             Dirs.minecraft,
-            "Mine in Abyss"
+            "SwaggySMP"
         )
     }
     val updatesQueued by derivedStateOf { queuedUpdates.isNotEmpty() }
@@ -121,7 +121,7 @@ class LaunchyState(
     // If any state is true, we consider import handled and move on
     var handledImportOptions by mutableStateOf(
         config.handledImportOptions ||
-                (Dirs.mineinabyss / "options.txt").exists() ||
+                (Dirs.swaggysmp / "options.txt").exists() ||
                 !Dirs.minecraft.exists()
     )
 
@@ -178,8 +178,8 @@ class LaunchyState(
         installingProfile = true
         FabricInstaller.installToLauncher(
             Dirs.minecraft,
-            Dirs.mineinabyss,
-            "Mine in Abyss",
+            Dirs.swaggysmp,
+            "SwaggySMP",
             versions.minecraftVersion,
             "fabric-loader",
             versions.fabricVersion,
@@ -223,7 +223,7 @@ class LaunchyState(
                         downloadingConfigs[mod] = it
                     }
                     downloadConfigURLs[mod] = mod.configUrl
-                    unzip(mod.config.toFile(), Dirs.mineinabyss.toString())
+                    unzip(mod.config.toFile(), Dirs.swaggysmp.toString())
                     mod.config.toFile().delete()
                     save()
                     println("Successfully downloaded ${mod.name} config")

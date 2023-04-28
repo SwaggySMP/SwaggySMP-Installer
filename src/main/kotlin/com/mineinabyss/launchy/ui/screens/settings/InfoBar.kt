@@ -29,8 +29,7 @@ fun InfoBar() {
     val state = LocalLaunchyState
     Surface(
         tonalElevation = 2.dp,
-        shadowElevation = 0.dp,
-        shape = RoundedCornerShape(topStart = 10.dp, topEnd = 10.dp),
+        shadowElevation = 1.dp,
         modifier = Modifier.fillMaxWidth(),
     ) {
         if (state.isDownloading) {
@@ -47,13 +46,13 @@ fun InfoBar() {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
-                .padding(horizontal = SETTINGS_HORIZONTAL_PADDING, vertical = 6.dp)
+                .padding(horizontal = SETTINGS_HORIZONTAL_PADDING, vertical = 10.dp)
         ) {
             InstallButton(
                 !state.isDownloading && state.operationsQueued && state.minecraftValid,
                 Modifier.width(Constants.SETTINGS_PRIMARY_BUTTON_WIDTH)
             )
-            Spacer(Modifier.width(12.dp))
+            Spacer(Modifier.width(20.dp))
             ActionButton(
                 shown = !state.minecraftValid,
                 icon = Icons.Rounded.Error,

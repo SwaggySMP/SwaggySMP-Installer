@@ -21,7 +21,7 @@ import com.mineinabyss.launchy.data.Dirs
 import com.mineinabyss.launchy.data.Versions
 import com.mineinabyss.launchy.logic.LaunchyState
 import com.mineinabyss.launchy.ui.LaunchyTypography
-import com.mineinabyss.launchy.ui.rememberMIAColorScheme
+import com.mineinabyss.launchy.ui.smpColorScheme
 import com.mineinabyss.launchy.ui.screens.Screens
 import com.mineinabyss.launchy.ui.state.TopBarProvider
 import com.mineinabyss.launchy.ui.state.TopBarState
@@ -35,7 +35,7 @@ val LocalLaunchyState: LaunchyState
 fun main() {
     application {
         val windowState = rememberWindowState(placement = WindowPlacement.Floating)
-        val icon = painterResource("mia_profile_icon.png")
+        val icon = painterResource("smp_icon.png")
         val launchyState by produceState<LaunchyState?>(null) {
             val config = Config.read()
             val versions = Versions.readLatest(config.downloadUpdates)
@@ -47,7 +47,7 @@ fun main() {
         }
         Window(
             state = windowState,
-            title = "Mine in Abyss - Launcher",
+            title = "SwaggySMP Installer",
             icon = icon,
             onCloseRequest = onClose,
             undecorated = true,
@@ -55,13 +55,13 @@ fun main() {
         ) {
             val topBarState = remember { TopBarState(onClose, windowState, this) }
             val ready = launchyState != null
-            val scheme = rememberMIAColorScheme(0.02f)
+            val scheme = smpColorScheme()
             MaterialTheme(colorScheme = scheme, typography = LaunchyTypography) {
                 CompositionLocalProvider(TopBarProvider provides topBarState) {
                     Scaffold {
                         AnimatedVisibility(!ready, exit = fadeOut()) {
                             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                                Text("Getting latest plugin versions...")
+                                Text("Getting latest updates...")
                             }
                         }
                         AnimatedVisibility(ready, enter = fadeIn()) {
