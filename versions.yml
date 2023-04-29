@@ -30,7 +30,7 @@ modGroups:
       homepage: https://modrinth.com/mod/desired-servers
       desc: Ship servers without modifying servers.dat
       url: https://cdn.modrinth.com/data/GDpe4LHD/versions/4F5sOpkI/desiredservers-fabric-1.19.2-1.1.0.jar
-      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/DesiredServerConfig.zip
+      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/desiredServerConfig.zip
       forceConfigDownload: true
 
     - name: Custom Splash Screen
@@ -38,7 +38,15 @@ modGroups:
       homepage: https://modrinth.com/mod/custom-splash-screen
       desc: Allows to completely change the minecraft splash screen
       url: https://cdn.modrinth.com/data/BwFQLeCh/versions/1.2.0/customsplashscreen-1.2.0.jar
-      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/customsplashscreen.zip
+      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/customSplashScreen.zip
+      forceConfigDownload: true
+
+    - name: Simple Discord RPC
+      license: ARR
+      homepage: https://modrinth.com/mod/simple-discord-rpc
+      desc: A simple to use Discord RPC mod for Minecraft
+      url: https://cdn.modrinth.com/data/ObXSoyrn/versions/AKhtuZR9/simple-rpc-fabric-1.19.4-3.2.2.jar
+      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/simpleDiscordRPC.zip
       forceConfigDownload: true
 
   Performance:
@@ -107,7 +115,7 @@ modGroups:
       homepage: https://modrinth.com/mod/betterf3
       desc: Makes the F3-menu customizable and cleaner
       url: https://cdn.modrinth.com/data/8shC1gFX/versions/jFVjbyGK/BetterF3-6.0.0-Fabric-1.19.4-pre3.jar
-      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/BetterF3-6.0.0.zip
+      configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/betterF3-6.0.0.zip
       requires: [ Cloth Config ]
 
   Dependencies:

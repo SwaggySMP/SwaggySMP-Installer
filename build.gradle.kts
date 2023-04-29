@@ -74,7 +74,7 @@ compose.desktop {
                 shortcut = true
                 upgradeUuid = "b627d78b-947c-4f5c-9f3b-ae02bfa97d08"
                 iconFile.set(iconsRoot.resolve("icon.ico"))
-                dirChooser = false
+                dirChooser = true
                 perUserInstall = false
             }
             linux {
