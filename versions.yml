@@ -159,7 +159,7 @@ modGroups:
       license: AGPL-3.0-or-later
       homepage: https://modrinth.com/mod/inventory-profiles-next
       desc: Help you keep your inventory sorted.
-      url: https://cdn.modrinth.com/data/O7RBXm3n/versions/bNgTx4Io/InventoryProfilesNext-fabric-1.20-1.10.2.jar
+      url: https://cdn.modrinth.com/data/O7RBXm3n/versions/siyWJB5Q/InventoryProfilesNext-fabric-1.19.4-1.10.2.jar
       requires: [libIPN]
 
   Optional Dependencies:
