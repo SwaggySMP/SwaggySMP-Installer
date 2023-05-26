@@ -11,6 +11,10 @@ groups:
     enabledByDefault: true
   - name: Dependencies
     forceEnabled: true
+  - name: Optional Mods
+    enabledByDefault: false
+  - name: Optional Dependencies
+    enabledByDefault: false
 modGroups:
   Core:
     - name: Sodium
@@ -94,7 +98,7 @@ modGroups:
       homepage: https://modrinth.com/mod/fallingleaves
       desc: Adds falling leaf particles to trees
       url: https://cdn.modrinth.com/data/WhbRG4iK/versions/OSEfdzSy/fallingleaves-1.15.0%2B1.19.4.jar
-      requires: [ Cloth Config ]
+      requires: [Cloth Config]
 
     - name: 3D Skin Layers
       license: tr7zw Protective
@@ -107,7 +111,7 @@ modGroups:
       homepage: https://modrinth.com/mod/chat-heads
       desc: Displays player heads next to chat messages.
       url: https://cdn.modrinth.com/data/Wb5oqrBJ/versions/AgO6WgUz/chat_heads-0.10.12-fabric-1.19.4.jar
-      requires: [ Cloth Config ]
+      requires: [Cloth Config]
 
   HUD Enhancements:
     - name: BetterF3
@@ -116,7 +120,7 @@ modGroups:
       desc: Makes the F3-menu customizable and cleaner
       url: https://cdn.modrinth.com/data/8shC1gFX/versions/jFVjbyGK/BetterF3-6.0.0-Fabric-1.19.4-pre3.jar
       configUrl: https://github.com/SwaggySMP/SwaggySMP-Installer-configs/releases/download/v1.0.0/betterF3.zip
-      requires: [ Cloth Config ]
+      requires: [Cloth Config]
 
   Dependencies:
     - name: Cloth Config
@@ -136,3 +140,38 @@ modGroups:
       homepage: https://modrinth.com/mod/modmenu
       desc: Adds a menu that allows configuration of mods
       url: https://cdn.modrinth.com/data/mOgUt4GM/versions/yjjsLqbS/modmenu-6.2.1.jar
+
+    - name: Fabric Language Kotlin
+      license: Apache-2.0
+      homepage: https://modrinth.com/mod/fabric-language-kotlin
+      desc: Kotlin programming language for Fabric mods.
+      url: https://cdn.modrinth.com/data/Ha28R6CL/versions/qgTQJrUS/fabric-language-kotlin-1.9.4%2Bkotlin.1.8.21.jar
+
+  Optional Mods:
+    - name: Zoomify
+      license: LGPL-3.0-only
+      homepage: https://modrinth.com/mod/zoomify
+      desc: A zoom mod with infinite customizability.
+      url: https://cdn.modrinth.com/data/w7ThoJFB/versions/mIiMyney/Zoomify-2.9.4.jar
+      requires: [YetAnotherConfigLib]
+
+    - name: Inventory Profiles Next
+      license: AGPL-3.0-or-later
+      homepage: https://modrinth.com/mod/inventory-profiles-next
+      desc: Help you keep your inventory sorted.
+      url: https://cdn.modrinth.com/data/O7RBXm3n/versions/bNgTx4Io/InventoryProfilesNext-fabric-1.20-1.10.2.jar
+      requires: [libIPN]
+
+  Optional Dependencies:
+    - name: YetAnotherConfigLib
+      license: LGPL-3.0-or-later
+      homepage: https://modrinth.com/mod/yacl
+      desc: A config library used by many mods.
+      url: https://cdn.modrinth.com/data/1eAoo2KR/versions/M5iKxVFU/yet-another-config-lib-fabric-2.5.1%2B1.19.4.jar
+
+    - name: libIPN
+      license: AGPL-3.0-or-later
+      homepage: https://modrinth.com/mod/libipn
+      desc: Config library used by Inventory Profiles Next.
+      url: https://cdn.modrinth.com/data/onSQdWhM/versions/auvkUb1L/libIPN-fabric-1.19.4-3.0.1.jar
+      requires: [Fabric Language Kotlin]
